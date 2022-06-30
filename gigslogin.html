@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Gigadmin</title>
+  </head>
+  <body>
+    <img src="/media/favico.png" alt="" />
+    <section id="login">
+      <h1 class="titleLogin">Gigs Admin Login</h1>
+      <h2 class="titleLogin2">You can upload your upcoming gigs here bro!</h2>
+      <form name="login" method="post" action="validador.php">
+        User:
+        <input class="textinput" required type="text" name="user" value="" />
+        <br />
+        Pass:
+        <input
+          class="textinput"
+          required
+          type="password"
+          name="pass"
+          value=""
+        />
+        <br />
+        <input class="btnlogin" type="submit" value="Login" />
+      </form>
+    </section>
+  </body>
+</html>
