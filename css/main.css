@@ -1,0 +1,578 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background-color: blue;
+  scroll-behavior: smooth;
+}
+section {
+  transition: transform 500ms ease-in-out;
+}
+.loader {
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: block;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@keyframes polyloader {
+  0% {
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+  }
+
+  25% {
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0%, 100% 0%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0%, 0% 0%, 0% 100%);
+  }
+}
+
+.welcome {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: blue;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 500ms ease-in-out;
+}
+.logoAnim {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bgpath {
+  z-index: 10000;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+  clip-path: polygon(100% 100%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@keyframes poly {
+  0% {
+    clip-path: polygon(100% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(20% 0%, 100% 0, 100% 0%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0, 0% 0%, 0% 100%);
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  top: 0;
+  left: 0;
+  padding-top: 2%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+}
+.navbar {
+  display: none;
+}
+.videoCont {
+  width: 100vw;
+
+  overflow-y: hidden;
+}
+
+.videoCont video {
+  width: initial;
+  position: absolute;
+  top: 0;
+  left: -140%;
+}
+.volIco {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+}
+
+.volIcoOn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: aqua;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.soundOff {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: rgb(229, 255, 0);
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 600ms ease-in-out;
+}
+
+.mainCont {
+  display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero {
+  width: 90%;
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  color: white;
+  z-index: 100;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 10% 0;
+  color: rgb(229, 255, 0);
+}
+
+.hero p {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 10% 0;
+}
+.ctaButton {
+  margin-top: 3%;
+  width: 15rem;
+  height: 2.5rem;
+  background-color: blue;
+  border-radius: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  border: transparent;
+  cursor: pointer;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.ctaButton a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerInfo {
+  display: none;
+  width: 100vw;
+  height: 15vh;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.foota p {
+  font-size: 0.8rem;
+  width: 100vw;
+  font-family: "Chivo", sans-serif;
+  color: black;
+}
+
+.foota {
+  display: flex;
+
+  animation: anim1 5s linear infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: trasnlateX(-200%);
+  }
+}
+
+#bio {
+  display: inline-block;
+}
+.biotxt {
+  width: 90%;
+  margin: 5% 5% 0 5%;
+}
+
+.biotxt h2 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 4.5rem;
+  padding-top: 70%;
+  margin: 10% 0 0 0;
+}
+.underline {
+  width: 100%;
+  height: 2.5rem;
+  background-color: white;
+}
+.biotxt p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: aqua;
+  margin-bottom: 10%;
+}
+
+.biotxt span,
+a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.biotxt h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: aqua;
+  margin-top: 10%;
+}
+
+.social svg {
+  width: 2rem;
+  fill: white;
+  margin-right: 1rem;
+}
+.bio-imgContainer {
+  margin-top: 10%;
+  position: initial;
+  width: 100vw;
+  height: 100vh;
+}
+
+.imgBio {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 40%;
+}
+
+#music {
+  width: 100vw;
+  display: inline-block;
+  height: auto;
+}
+
+#music h3 {
+  padding: 15% 0 0 5%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+.musicwrap {
+  width: 100vw;
+  margin: 0% 5% 20% 5%;
+  display: grid;
+  grid-template-rows: repeat(12, 50vh);
+  height: initial;
+  gap: 2rem;
+}
+.musicwrap iframe {
+  width: 90%;
+  height: 100%;
+}
+
+#gigs {
+  width: 100vw;
+}
+
+.gigtitle {
+  padding: 5% 0 0 8%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+
+.underline2 {
+  width: 100vw;
+  height: 2.5rem;
+  background-color: white;
+}
+.gigcontainer {
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 20%;
+}
+.bottomspacer {
+  margin-top: 20rem;
+}
+
+/*POSted GIGS*********************************************************************************************/
+.fecha {
+  font-family: "Montserrat";
+  font-size: 1.3rem;
+  color: white;
+  margin-left: 10%;
+}
+.descrip {
+  font-family: "Arial";
+  font-size: 1rem;
+  color: white;
+  margin-left: 10%;
+  letter-spacing: 1.5px;
+}
+.ralink {
+  font-family: "Arial";
+  font-size: 0.8rem;
+  color: white;
+  margin-left: 10%;
+  letter-spacing: 1.5px;
+}
+
+/* .ralink {
+  font-family: "Arial";
+  font-size: 1rem;
+  color: white;
+  margin-left: 10%;
+  letter-spacing: 1.5px;
+} */
+
+.divline {
+  margin-top: 2%;
+  width: 100vw;
+  height: 1px;
+  background-color: white;
+}
+/***********************************************************************************************************************/
+
+/*MEDIA QUERIES/////////////////////////////////////////////*/
+
+@media (min-width: 376px) {
+  .hero {
+    top: 40%;
+  }
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .foota p {
+    font-size: 1rem;
+  }
+
+  .biotxt h1 {
+    padding-top: 20%;
+  }
+
+  .biotxt p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 568px) {
+  .hero {
+    top: 10%;
+  }
+  .hero h1 {
+    margin-bottom: 3%;
+  }
+
+  .hero p {
+    margin-bottom: 3%;
+  }
+  .imgBio {
+    height: initial;
+  }
+  .videoCont video {
+    width: 100vw;
+    left: 0;
+  }
+  .musicwrap {
+    grid-template-columns: repeat(2, 42vw);
+    grid-template-rows: repeat(6, 80vh);
+  }
+}
+
+@media (min-width: 736px) {
+  .hero {
+    top: 20%;
+  }
+  .biotxt h2 {
+    padding-top: 5%;
+  }
+  .imgBio {
+    height: initial;
+  }
+}
+
+@media (min-width: 768px) {
+  .videoCont video {
+    width: initial;
+    height: 100vh;
+    left: -70%;
+  }
+  .hero {
+    top: 50%;
+  }
+  .biotxt h2 {
+    padding-top: 5%;
+  }
+  .imgBio {
+    height: initial;
+  }
+  .bio-imgContainer {
+    height: initial;
+  }
+  #music h2 {
+    padding-top: 5%;
+  }
+  .musicwrap {
+    grid-template-columns: repeat(2, 42vw);
+    grid-template-rows: repeat(6, 30vh);
+  }
+  .footerInfo p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1112px) {
+  .welcome {
+    font-size: 3.5rem;
+  }
+
+  .header {
+    height: initial;
+    padding-top: 0;
+  }
+  .volIco {
+    right: 8%;
+  }
+
+  .navbar {
+    display: block;
+  }
+  .navbar ul {
+    display: flex;
+    margin-left: 27%;
+  }
+
+  .navbar li {
+    margin-right: 3rem;
+    list-style: none;
+  }
+
+  .navbar a {
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: rgb(229, 255, 0);
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+  }
+
+  .slider {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+
+  .hero {
+    top: 40%;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1%;
+  }
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2%;
+  }
+  .videoCont video {
+    width: 100vw;
+    height: initial;
+    left: 0;
+  }
+  .foota p {
+    font-size: 2rem;
+  }
+  #bio {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  .biotxt h2 {
+    font-size: 6rem;
+    padding-top: 0;
+  }
+  .biotxt h2 {
+    margin-top: 3%;
+  }
+
+  .biotxt p {
+    margin-bottom: 3%;
+  }
+
+  .bio-imgContainer {
+    margin-top: 0;
+  }
+
+  .imgBio {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 10% left;
+  }
+  #music h3 {
+    padding: 5% 0 0 5%;
+  }
+  .musicwrap {
+    grid-template-columns: repeat(6, 13.5vw);
+    grid-template-rows: 25vh 25vh;
+  }
+  .footerInfo {
+    height: initial;
+  }
+  .foota div {
+    width: 100%;
+  }
+  .foota {
+    justify-content: space-around;
+  }
+
+  .foota p {
+    font-size: 1.8rem;
+  }
+}

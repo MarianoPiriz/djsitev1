@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background-color: blue;
+  
+}
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: -100;
+}
+
+#login {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-25%, -50%);
+}
+.titleLogin {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2rem;
+}
+.titleLogin2 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+
+form {
+  
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.textinput {
+    color: white;
+    width: 230px;
+    font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 1.25rem;
+  background: transparent;
+  letter-spacing: 0.4rem;
+  border: none;
+  outline: none;
+  outline-color: transparent;
+  
+  border-bottom: 1.5px solid white;
+}
+
+.btnlogin {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1.5rem;
+  width: 13rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  outline: none;
+  letter-spacing: 0.15rem;
+  border-color: transparent;
+}
